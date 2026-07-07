@@ -4,265 +4,220 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+<title>Trade With Munaaf</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family:'Oxanium',sans-serif;
-    background:url('https://i.ibb.co/7x4vqZqd/image.jpg') no-repeat center center;
-    background-size:cover;
-
-    min-height:100dvh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:20px;
-    overflow-x:hidden;
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:#fff;
 }
 
-.glass-box{
-    width:100%;
-    max-width:420px;
-    background:rgba(0,0,0,0.55);
-    backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px);
-    padding:35px 30px;
-    border-radius:18px;
-    border:1px solid rgba(255,255,255,0.18);
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
+/* CARD */
+
+.container{
+width:95%;
+max-width:420px;
+padding:30px 25px;
+border-radius:18px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+text-align:center;
 }
 
-.logo-img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    border:3px solid #ffdb4d;
-    box-shadow:0 0 18px #ffdb4d;
-    object-fit:cover;
-    margin-bottom:18px;
+/* LOGO */
+
+.logo{
+width:80px;
+height:80px;
+border-radius:50%;
+border:2px solid #FFD700;
+margin-bottom:12px;
 }
 
-.title{
-    font-size:32px;
-    font-weight:700;
-    color:#ffdb4d;
-    text-shadow:0 0 15px #ffdb4d;
-    margin-bottom:8px;
+/* TEXT */
+
+h1{
+font-size:22px;
+color:#FFD700;
+margin-bottom:6px;
 }
 
-.sub-title{
-    font-size:18px;
-    color:#ffe26f;
-    margin-bottom:25px;
-    text-shadow:0 0 8px black;
+h2{
+font-size:15px;
+opacity:0.9;
+margin-bottom:10px;
 }
 
-.join-btn{
-    display:block;
-    width:100%;
-    padding:16px;
-    background:linear-gradient(90deg,#0088cc,#00a8ff);
-    color:#fff;
-    text-decoration:none;
-    border-radius:12px;
-    font-size:18px;
-    font-weight:700;
-    box-shadow:0 0 12px #00a8ff;
-    margin-bottom:20px;
-    transition:.3s;
-    animation:pulse 1.7s infinite;
+.sub{
+font-size:13px;
+opacity:0.7;
+margin-bottom:18px;
 }
 
-.join-btn:hover{
-    transform:scale(1.03);
-    box-shadow:0 0 20px #00c2ff;
+/* BUTTON */
+
+.btn{
+display:block;
+text-decoration:none;
+background:#22c55e;
+color:#000;
+font-weight:700;
+padding:16px;
+border-radius:10px;
+margin:12px 0;
+transition:0.3s;
 }
 
-@keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(.96);}
-    100%{transform:scale(1);}
+.btn:hover{
+background:#16a34a;
+transform:scale(1.03);
 }
 
-.highlight{
-    color:#ffdb4d;
-    padding:8px 14px;
-    border:1px solid #ffdb4d;
-    border-radius:8px;
-    font-size:15px;
-    margin:15px 0;
-    box-shadow:0 0 12px rgba(255,219,77,.4);
+/* TRUST BOX */
+
+.trust{
+background:rgba(0,255,150,0.08);
+padding:10px;
+border-radius:10px;
+font-size:13px;
+margin-bottom:15px;
+border:1px solid rgba(0,255,150,0.2);
 }
 
-p{
-    color:#fff;
-    text-shadow:0 0 8px black;
-    margin:8px 0;
-    font-size:16px;
+/* LIST */
+
+.points{
+list-style:none;
+font-size:14px;
+text-align:left;
+margin:15px 0;
 }
 
-footer{
-    font-size:12px;
-    color:#ccc;
-    margin-top:15px;
+.points li{
+margin:8px 0;
 }
 
-.ad-box{
-    margin-top:18px;
-    background:linear-gradient(135deg,#4f46e5,#9333ea,#ec4899);
-    padding:10px 14px;
-    font-size:13px;
-    color:#fff;
-    border-radius:10px;
-    display:inline-block;
-    box-shadow:0 3px 12px rgba(0,0,0,.25);
-    border:1px solid rgba(255,255,255,.18);
-    animation:glow 2s infinite alternate;
+/* URGENCY */
+
+.timer{
+margin-top:10px;
+font-size:13px;
+color:#facc15;
 }
 
-.ad-box a{
-    color:#6cb6ff;
-    text-decoration:none;
-    font-weight:700;
-    margin:0 4px;
-    border-bottom:1px solid rgba(108,182,255,.6);
+/* SOCIAL PROOF */
+
+.proof{
+margin-top:12px;
+font-size:12px;
+opacity:0.7;
 }
 
-@keyframes glow{
-    from{box-shadow:0 0 8px #9333ea;}
-    to{box-shadow:0 0 14px #ec4899;}
+/* FOOTER BRAND */
+
+.footer{
+margin-top:20px;
+font-size:12px;
+opacity:0.6;
 }
 
-/* Tablet */
-@media (max-width:768px){
-
-    .glass-box{
-        padding:25px 20px;
-    }
-
-    .logo-img{
-        width:110px;
-        height:110px;
-    }
-
-    .title{
-        font-size:28px;
-    }
-
-    .sub-title{
-        font-size:16px;
-    }
+.footer a{
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
 }
 
-/* Mobile */
-@media (max-width:480px){
-
-    body{
-        min-height:100dvh;
-        padding:12px;
-    }
-
-    .glass-box{
-        max-width:380px;
-        padding:20px 15px;
-    }
-
-    .logo-img{
-        width:90px;
-        height:90px;
-    }
-
-    .title{
-        font-size:22px;
-    }
-
-    .sub-title{
-        font-size:14px;
-    }
-
-    .join-btn{
-        font-size:15px;
-        padding:14px;
-    }
-
-    p{
-        font-size:14px;
-    }
-
-    .highlight{
-        font-size:13px;
-    }
+.footer a:hover{
+text-decoration:underline;
 }
 
-/* Desktop */
-@media (min-width:1200px){
+/* RISK */
 
-    .glass-box{
-        max-width:500px;
-        padding:45px;
-    }
-
-    .title{
-        font-size:38px;
-    }
-
-    .sub-title{
-        font-size:20px;
-    }
-
-    .logo-img{
-        width:150px;
-        height:150px;
-    }
+.risk{
+margin-top:10px;
+font-size:11px;
+opacity:0.5;
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="glass-box">
+<div class="container">
 
-    <img src="https://i.ibb.co/k6vf2mgB/ahn-Ffc-Nrx-NLqf-At-YAg-Hyrej4b-Nf-O7-Z9rh-FZb-B1k-PU1e-U46-Uxe-DWa6-H9-A2-O0-Gk-K9y5-VGz-UA1-PZr-EJRYjj40q.jpg" alt="Logo" class="logo-img">
+<img src="https://i.ibb.co/zWzp49cq/ahn-Ffc-Nrx-NLqf-At-YAg-Hyrej4b-Nf-O7-Z9rh-FZb-B1k-PU1e-U46-Uxe-DWa6-H9-A2-O0-Gk-K9y5-VGz-UA1-PZr-EJRYjj40q.jpg" class="logo">
 
-    <div class="title">PANKAJ BHARDWAJ</div>
+<h1>PANKAJ BHARDWAJ</h1>
+<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
 
-    <div class="sub-title">
-        📊 Stock Market Learning Community
-    </div>
+<p class="sub">
+Daily Intraday Trading Signals & Analysis
+</p>
 
-    <a href="https://t.me/+-JnzPqU5JFk1YjI1" class="join-btn" target="_blank">
-        🚀 Join Our Telegram Group
-    </a>
+<!-- TOP BUTTON -->
+<a href="https://t.me/+-JnzPqU5JFk1YjI1" class="btn">
+🚀 Join Free Telegram Channel
+</a>
 
-    <div class="highlight">
-        🔥 India's Trusted Learning Group
-    </div>
+<div class="trust">
+✔ Trusted by 5,000+ Traders <br>
+✔ Daily Consistent Setups
+</div>
 
-    <p>🎯 Live Educational Sessions</p>
-    <p>📘 Learn Stocks • Indices • Concepts</p>
-    <p>🚀 Join Free Community Today</p>
+<ul class="points">
+<li>✔ 5–7 High Probability Trades</li>
+<li>✔ Exact Entry, SL & Target</li>
+<li>✔ Beginner Friendly Guidance</li>
+<li>✔ Live Market Updates</li>
+</ul>
 
-    <footer>
-        Educational purpose only. No investment advice.
-    </footer>
+<!-- BOTTOM BUTTON -->
+<a href="https://t.me/+-JnzPqU5JFk1YjI1" class="btn">
+🚀 Join Free Telegram Channel
+</a>
 
-    <div class="ad-box">
-        🔥 Ads by
-        <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-            ADSBUILD AGENCY
-        </a>
-        • Instant Growth 🚀
-    </div>
+<div class="timer">
+⏳ Free Access Closing Soon
+</div>
 
- <!-- Meta Pixel Code -->
+<div class="proof">
+📈 Limited Seats • Active Community
+</div>
+
+<p class="risk">
+⚠ Market investments are subject to risk
+</p>
+
+<!-- CLEAN FOOTER -->
+<div class="footer">
+Powered by 
+<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
+AdsBuild Agency
+</a>
+</div>
+
+</div>
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
